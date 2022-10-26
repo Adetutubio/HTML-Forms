@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+ 
+    <fieldset>
+ 
+        <legend>User Information</legend>
+ 
+    <form method="get" action="" autocomplete="on" novalidate="yes" target="_self">
+
+      <label for="firstname">First Name:</label>
+      <input type="text" id="form" name="first-name" placeholder="Input your first name" maxlength="30" size="20" required/>
+      <br />
+ 
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="form" name="last-name" placeholder="Input your last name" maxlength="30"size="20" readonly/>
+      <br />
+ 
+      <label for="form">Email address:</label>
+      <input type="text" name="email" placeholder="Type your email address" size="20" pattern="[a-z]{10,30}"/>
+      <br />
+
+      <label for="birthdate">Date of Birth</label>
+      <input type="date" id="birthdate" name="dateofbirth" max="1991-12-31" min="2007-01-01"><br />
+ 
+      <label for="form">Password:</label>
+      <input type="password" id="form" name="password" placeholder="password" maxlength="30" size="20" disabled/><br />
+ 
+      <p>Please tell us about yourself and your career goals <br />
+        <textarea name="comments" cols="40" rows="5">Tell us about yourself...</textarea>
+      </p>
+ 
+      </fieldset>
+
+      <br />
+ 
+      <label for="experience"> Do you have prior experience in tech </label>
+      <input type="radio" id="experience" name="experience" value="yes" />Yes
+      <input type="radio" id="experience" name="experience" value="no" />No
+      <br />
+ 
+      <p>Please select your chosen track </p>
+        <input type="checkbox" id="track" name="frontend" value="frontend" checked="checked"/>
+        <label for="frontend">Frontend</label> <br />
+ 
+        <input type="checkbox" id="track" name="backend" value="backend" />
+        <label for="backend">Backend</label> <br />
+ 
+        <input type="checkbox" id="track" name="design" value="design" />
+        <label for="design">design</label> <br />
+     
+ 
+      <p>
+        What is your your preferred learning option
+        <select name="learning-option">
+          <option value="online" selected="selected">Online</option>
+          <option value="physical">Physical</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </p>
+ 
+      <p>Upload your resume</p>
+      <input type="file" name="resume" />
+      <input type="submit" value="upload" />
+    </form>
+ 
+     <br/>
+      <br/>
+ 
+    <button type="submit">Submit Form</button>
+
+    <input type="reset" value="Reset the Form">
+
+    <input type="hidden" id="form" name="form" value="form">
+  </body>
+</html>
